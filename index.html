@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- <link rel="icon" href="./img/appleLogoGrey.png" /> -->
+    <title>Mentorify</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./material/mainLogo.png" alt="Mentorify" class="logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mb-1" style="justify-content: space-around; width:70%">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="# ">About <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Plans <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Mentors <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Book <span class="visually-hidden">(current)</span></a>
+                    </li>
+
+                </ul>
+            </div>
+      </div>
+    </nav>
+    
+    <div class="page" style="background: linear-gradient(to right,rgb(23, 233, 224, 0.3), rgb(252, 205, 4, 0.2));">
+        <div class="randomBackgroundFiller" style="height: 0.5px;"></div>        
+        <div class="container" style="height:100%">
+            <div class="row mt-5 ms-4 me-4 mb-5 m">
+                <div class="col-12 col-sm-6 align-self-center">
+                    <p class="display-4 mb-3">Premium mentoring service</p> 
+                    <p class="display-5  mb-3" style="font-size: calc(0.56rem + 0.84vw);">
+                        Looking to learn a new skill? Find an expert mentor that will teach it to you. 
+                    </p>
+                    <div class="row" style="max-width: 400px;">
+                        <div class="col">
+                            <button type="button" class="defButton plansButton">Plans</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="defButton mentorsButton">Mentors</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6  align-self-center">
+                    <img src="./material/Teacher student-pana.png" class="img-fluid rounded-top" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" style="text-align: center; font-family: Jost; font-size: 2.5rem;">Discover our plans</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-3 align-self-center cardItem me-4" style="background-color: #17E9E0; max-width: 230px;">
+                    <p class="h4 text-center">Intermediate</p>
+                    <p class="text-center">100$ / Day</p>
+                </div>
+                <div class="col-4 cardItem me-4" style="background-color:#FCCD04; height: 300px; max-width: 230px;"></div>
+                <div class="col-3 align-self-center cardItem me-4" style="background-color: #adebe8;  max-width: 230px;"></div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
