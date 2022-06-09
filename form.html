@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+
+    <title>Mentorify</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./material/mainLogo.png" alt="Mentorify" class="logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mb-1" style="justify-content: space-around; width:70%">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">About <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Plans <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Mentors <span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="form.html">Book <span class="visually-hidden">(current)</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page" style="background: linear-gradient(to right,rgb(23, 233, 224, 0.3), rgb(252, 205, 4, 0.2));">
+        <div class="randomBackgroundFiller" style="height: 0.5px;"></div>
+        <div class="container" style="height:100%">
+            <div class="row mt-5 ms-4 me-4 mb-5 m">
+                <div class="col-12 col-sm-6 align-self-center text-center">
+                    <img src="./material/firstProgression.png" class="img-fluid rounded-top mb-2" alt=""
+                        style="width: 70%; max-width: 350px;">
+                    <div class="col text-start align-content-center justify-content-center">
+                        <div class="col bookingForm p-3">
+                            <p class="h2 text-center mb-4" style="color:rgb(252, 205, 4)">Book a mentor</p>
+                            <label for="planType" class="mb-1 h5" style="display:block; font-weight: 400;">Plan type</label>
+                            <select id="planType" required>
+                                <option disabled selected>Select an option</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Basic">Basic</option>
+                            </select>
+                            <label for="Subject" class="mb-1 h5 mt-3" style="display:block; font-weight: 400;">Subject</label>
+                            <select id="Subject" required>
+                                <option disabled selected>Select an option</option>
+                                <option value="Music">Music</option>
+                                <option value="Engineering">Engineering</option>
+                                <option value="Business">Business</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label for="Mentor" class="mb-1 h5 mt-3" style="display:block; font-weight: 400;">Mentor</label>
+                            <select id="Mentor" required>
+                                <option disabled selected>Select an option</option>
+                            </select>
+                            <label for="startTime" class="mb-1 h5 mt-3" style="display:block; font-weight: 400;">Start Time</label>
+                            <input type="date" id="startTime">
+                            
+                            <div class="buttonParent  mt-4" style="width: 100%; display: flex; justify-content: end;">
+                                <button type="button" class="defButton mentorsButton align-self-end">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1 col-sm-6  align-self-center text-center">
+                    <img src="./material/Teaching-cuate.png" class="img-fluid rounded-top" alt=""
+                        style="max-height: 500px;" id="formImage">
+                </div>
+            </div>
+            <div class="randomBackgroundFiller" style="height: 50px;"></div>
+
+            <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script>
+                flatpickr("#startTime ", {
+                    enableTime: true,
+                    dateFormat: "Y-m-d H:i",
+                    minDate: "today",
+                    maxDate: new Date().fp_incr(14),
+                    minTime: "08:00",
+                    maxTime: "20:00",
+                    defaultDate: "today",
+                    defaultHour: 8,
+                    "disable": [
+                        function (date) {
+                            return (date.getDay() === 0);
+
+                        }
+                    ],
+                });
+            </script>
+            
+</body>
+
+</html>
