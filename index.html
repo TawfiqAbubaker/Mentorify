@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- <link rel="icon" href="./img/appleLogoGrey.png" /> -->
+    <link rel="icon" href="./material/mainicon.png" />
     <title>Mentorify</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
     <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="./material/mainLogo.png" alt="Mentorify" class="logo">
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -27,10 +28,10 @@
                         <a class="nav-link" href="index.html">About <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Plans <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link" href="#Plans">Plans</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Mentors <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link" href="#Mentors">Mentors <span class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="form.html">Book <span class="visually-hidden">(current)</span></a>
@@ -40,56 +41,66 @@
             </div>
       </div>
     </nav>
-    
     <div class="page" style="background: linear-gradient(to right,rgb(23, 233, 224, 0.3), rgb(252, 205, 4, 0.2));">
         <div class="randomBackgroundFiller" style="height: 0.5px;"></div>        
-        <div class="container" style="height:100%">
+        <section class="container pageChild" style="height:80vh; display: flex;" id="#About">
             <div class="row mt-5 ms-4 me-4 mb-5 m">
                 <div class="col-12 col-sm-6 align-self-center">
-                    <p class="display-4 mb-3">Premium mentoring service</p> 
-                    <p class="display-5  mb-3" style="font-size: calc(0.56rem + 0.84vw);">
-                        Looking to learn a new skill? Find an expert mentor that will teach it to you. 
-                    </p>
-                    <div class="row" style="max-width: 400px;">
-                        <div class="col">
-                            <button type="button" class="defButton plansButton">Plans</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="defButton mentorsButton">Mentors</button>
+                    <div style="width: 90%;">
+                        <p class="display-4 mb-3">Premium mentoring service</p>
+                        <p class="display-5  mb-3" style="font-size: calc(0.56rem + 0.84vw);">
+                            Looking to learn a new skill? Find an expert mentor that will teach it to you.
+                        </p>
+                        <div class="row" style="max-width: 400px;">
+                            <div class="col">
+                                <button type="button" class="defButton plansButton">Plans</button>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="defButton mentorsButton">Mentors</button>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="col-12 col-sm-6  align-self-center">
                     <img src="./material/Teacher student-pana.png" class="img-fluid rounded-top" alt="">
                 </div>
             </div>
-        </div>
-        <div class="container">
+        </section>
+        <!-- <div class="div mt-5 mb-5" style="height:50px"></div> -->
+
+        <section class="container pageChild mb-5" id="Plans"  style="height:75vh; display: flex; flex-direction: column; justify-content: center;">
             <div class="row">
-                <div class="col-12" style="text-align: center; font-family: Jost; font-size: 2.5rem;">Discover our plans</div>
+                <div class="col-12" style="text-align: center; font-size: 3rem;">Discover our plans</div>
             </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col-3 align-self-center cardItem me-5" style="background-color: #17E9E0; max-width: 250px;">
-                    <p class="h4 text-center mt-4">Intermediate</p>
-                    <p class="text-center">100$</p>
+            <div class="row justify-content-center mt-5 tripleC">
+                <div class="col-12 col-lg-4 align-self-center cardItem me-3" style="background-color: #17E9E0; max-width: 250px;"  data-aos= "fade-right">
+                    <p class="h3 text-center mt-4">Intermediate</p>
+                    <p class="text-center mb-3">100$</p>
                     <ul>
                         <li>Up to 6 hours of mentorship</li>
                         <li>1 Meal included</li> 
                         <li>50% reimbursement if dissatisfied</li>
                     </ul>
                 </div>
-                <div class="col-4 cardItem me-5" style="background-color:#FCCD04; height: 300px; max-width: 240px;">
-                    <p class="h4 text-center mt-4">Premium</p>
-                    <p class="text-center">150$</p>
-                    <ul>
-                        <li>Spend up to an entire day learning with a mentor.</li>
-                        <li>3 Meals included</li>
-                        <li>Money-back guaranteed if dissatisfied.</li>
-                    </ul>
+                <div class="col-12 col-lg-5 cardPremium me-3 ms-3" style="max-width: 250px;" data-aos="fade-in">
+                    <p class="h3 text-center mt-4">Premium</p>
+                    <p class="text-center mb-4">150$</p>
+                    <div  class="ps-3 pe-3 pt-1">
+                        <ul>
+                            <li>Spend up to an entire day learning with a mentor.</li>
+                            <li>3 Meals included</li>
+                            <li>Money-back guaranteed if dissatisfied.</li>
+                            <li>Ability to switch mentors.</li>
+
+                        </ul>
+                    </div>
+                    
                 </div>
-                <div class="col-3 align-self-center cardItem me-5" style="background-color: #adebe8;  max-width: 250px;">
-                    <p class="h4 text-center mt-4">Basic</p>
-                    <p class="text-center">60$</p>
+                <div class="col-12 col-lg-4 align-self-center cardItem ms-3" style="background-color: #adebe8;  max-width: 250px;"
+                data-aos= "fade-left">
+                    <p class="h3 text-center mt-4">Basic</p>
+                    <p class="text-center mb-3">60$</p>
                     <ul>
                         <li>Up to 3 hours of mentorship</li>
                         <li>No Meals included</li> 
@@ -97,31 +108,146 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="container">
+            <div class="carouselParent" style="width: 100%; display: flex; justify-content: center; display: none;" >
+                <div class="carousel" style="display: flex; justify-content: center; width: 300px;">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class=" me-3 ms-3 cardPremium2">
+                                    <p class="h3 text-center mt-5">Premium</p>
+                                    <p class="text-center mb-4">150$</p>
+                                    <div class="ps-3 pe-3 pt-1">
+                                        <ul>
+                                            <li>Spend up to an entire day learning with a mentor.</li>
+                                            <li>3 Meals included</li>
+                                            <li>Money-back guaranteed if dissatisfied.</li>
+                                            <li>Ability to switch mentors.</li>
+                        
+                                        </ul>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class=" me-3 ms-3 cardItem2" style="max-width: 300px; background-color: #17E9E0;">
+                                    <p class="h3 text-center mt-4">Intermediate</p>
+                                    <p class="text-center mb-4">100$</p>
+                                    <div class="ps-3 pe-3 pt-1">
+                                        <ul>
+                                            <li>Up to 6 hours of mentorship</li>
+                                        <li>1 Meal included</li>
+                                        <li>50% reimbursement if dissatisfied</li>
+                        
+                                        </ul>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class=" me-3 ms-3 cardItem2" style="max-width: 300px; background-color: #adebe8;">
+                                    <p class="h3 text-center mt-4">Basic</p>
+                                    <p class="text-center mb-4">60$</p>
+                                    <div class="ps-3 pe-3 pt-1">
+                                        <ul>
+                                            <li>Up to 3 hours of mentorship</li>
+                                            <li>No Meals included</li> 
+                                            <li>No Money-back if dissatisfied</li>
+                        
+                                        </ul>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+            
+        </section>
+        <section class="container pageChild" id="Mentors">
             <div class="row">
                 <div class="col-12 mt-5" style="text-align: center; font-size: 2.5rem;">Meet our team</div>
+                <div class="col-12 mt-" style="text-align: center; font-size: 1rem;">Click on a Subject to see the available mentors then click on a Mentor to see his description. </div>
             </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col-4" style="background-color: rgb(23,233,224,0.4); max-width: 300px;">
-                    <p class="h4 text-center mt-4">Subject</p>
-                    p
+            <div class="row justify-content-center mt-3" data-aos= "fade-up" style="border-radius: 30px;">
+                <div class="col-4" style="background-color: rgb(23,233,224,0.4); max-width: 300px; padding: 0;border-radius: 30px 0px 0px 30px;">
+                    <p class="h4 text-center mt-4 mb-4">Subject</p>
+                    <p class = "tableItem" id="tableEng">Engineering</p>
+                    <p class = "tableItem" id="tableBus">Business</p>
+                    <p class = "tableItem" id="tableMus">Music</p>
+                    <p class = "tableItem" id="tableOth">Other</p>
                 </div>
-                <div class="col-4" style="background-color:rgb(252,205,4,0.4); height: 300px; max-width: 300px;">
-                    <p class="h4 text-center mt-4">Mentors</p>
+                <div class="col-4" style="background-color:rgb(252,205,4,0.4);max-width: 300px; padding: 0;">
+                    <p class="h4 text-center mt-4 mb-4">Mentors</p>
+                    <p class = "tableItem" id="tableM1">Rod Knee</p>
+                    <p class = "tableItem" id="tableM2">Rita Book</p>
+                    <p class = "tableItem" id="tableM3">Joe Awl</p>
+                    <p class = "tableItem" id="tableM4">Johnny Amber</p>
                     
                 </div>
-                <div class="col-4" style="background-color: rgb(173,235,232,0.4);  max-width: 300px;">
-                    <p class="h4 text-center mt-4">Description</p>
-                    
+                <div class="col-4" style="background-color: rgb(173,235,232,0.4);  max-width: 300px;border-radius: 0px 30px 30px 0px;">
+                    <p class="h4 text-center mt-4 mb-5">Description</p>
+                    <div id="tableDesc">
+                        <ul>
+                            <li class="mb-3">Specialty: Biology</li>
+                            <li class="mb-3">Years of professional experience: 5</li>
+                            <li class="mb-3">Years of tutoring: 2</li>
+                            <li class="mb-3">Rating : 4.1 ⭐</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
+        </section>
+        <div id="footer" class="mt-5">
+            <div class="container" style="height: 100%;">
+                <div class="row" style="height: 100%;">
+                    <div class="col-6 col-md-4 align-self-center align-items-center" style="display: flex; justify-content: center;">
+                        <div class="" style="display: inline-block;">
+                            <p class="h5" style="font-family: Inter;">Mentorify</p>
+                            <p>Want to become a mentor? </br>
+                            Send your resume to: </br><b>application@mentorify.ca</b></p>
+                        </div>  
+                    </div>
+                    <div class="col-6  col-md-4 align-self-center align-items-center" style="display: flex; justify-content: center;">
+                        <div class="" style="display: inline-block;">
+                            <p class="h5" style="font-family: Inter;">Address</p>
+                            <p>60 George St Ottawa ON</p>
+                            <p class="h5" style="font-family: Inter;">Phone Number</p>
+                            <p>+1 (343) 876-3428</p>
+                        </div>  
+                    </div>
+                    <div class="col-12 col-md-4 align-self-center align-items-center" style="display: flex; justify-content: center;">
+                        <div class="" style="display: inline-block;">
+                            <p class="h5" style="font-family: Inter;">Opening Hours</p>
+                            <p>Monday-Saturday: 8am-8pm</p>
+                            <p class="m-0">If dissatisfied with the service, contact: </br>
+                                <b>HR@mentorify.ca</b> to get a credit card refund.
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
    
     <script src="script.js"></script>
-    <script src="data.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1500,
+        once: false,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

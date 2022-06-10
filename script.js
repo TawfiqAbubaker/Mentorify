@@ -1,5 +1,15 @@
-const subject = document.querySelector('#Subject');
-const mentor = document.querySelector('#Mentor');
+const tableDesc = document.querySelector("#tableDesc");
+const tableEng = document.querySelector("#tableEng");
+const tableBus = document.querySelector("#tableBus");
+const tableMus = document.querySelector("#tableMus");
+const tableOth = document.querySelector("#tableOth");
+const tableM1 = document.querySelector("#tableM1");
+const tableM2 = document.querySelector("#tableM2");
+const tableM3 = document.querySelector("#tableM3");
+const tableM4 = document.querySelector("#tableM4");
+const tableSubjects = [tableEng, tableBus, tableMus, tableOth];
+const tableMs = [tableM1,tableM2,tableM3,tableM4];
+
 const data = [
     {
         name: "Rod Knee",
@@ -7,7 +17,7 @@ const data = [
         KeySpecialties: "Computer Science",
         YearsProfessional: "5",
         YearsTutoring: "1",
-        Rating: "4.9"
+        Rating: "4.9",
     },
     {
         name: "Rita Book",
@@ -15,7 +25,7 @@ const data = [
         KeySpecialties: "Computer Science",
         YearsProfessional: "3",
         YearsTutoring: "1",
-        Rating: "4.6"
+        Rating: "4.6",
     },
     {
         name: "Joe Awl",
@@ -23,7 +33,7 @@ const data = [
         KeySpecialties: "Object oriented programming",
         YearsProfessional: "4",
         YearsTutoring: "2",
-        Rating: "4.7"
+        Rating: "4.7",
     },
     {
         name: "Johnny Amber",
@@ -31,7 +41,7 @@ const data = [
         KeySpecialties: "Chemical engineering",
         YearsProfessional: "5",
         YearsTutoring: "1",
-        Rating: "4.3"
+        Rating: "4.3",
     },
     {
         name: "Deffy Amber",
@@ -39,7 +49,7 @@ const data = [
         KeySpecialties: "Finance",
         YearsProfessional: "12",
         YearsTutoring: "3",
-        Rating: "5"
+        Rating: "5",
     },
     {
         name: "Aninta Letterback",
@@ -47,7 +57,7 @@ const data = [
         KeySpecialties: "Accounting",
         YearsProfessional: "4",
         YearsTutoring: "3",
-        Rating: "4.1"
+        Rating: "4.1",
     },
     {
         name: "Audie Yose",
@@ -55,7 +65,7 @@ const data = [
         KeySpecialties: "Management",
         YearsProfessional: "24",
         YearsTutoring: "12",
-        Rating: "4.9"
+        Rating: "4.9",
     },
     {
         name: "Maddy Scope",
@@ -63,7 +73,7 @@ const data = [
         KeySpecialties: "Finance",
         YearsProfessional: "4",
         YearsTutoring: "7",
-        Rating: "4.4"
+        Rating: "4.4",
     },
     {
         name: "Peter File",
@@ -71,7 +81,7 @@ const data = [
         KeySpecialties: "Guitar",
         YearsProfessional: "4",
         YearsTutoring: "7",
-        Rating: "5"
+        Rating: "5",
     },
     {
         name: "Col Fays",
@@ -79,15 +89,15 @@ const data = [
         KeySpecialties: "Piano",
         YearsProfessional: "12",
         YearsTutoring: "2",
-        Rating: "4.3"
+        Rating: "4.3",
     },
     {
-        name: "Andrianampoinimero Ramarosandratana",
+        name: "Will Byers",
         Subject: "Music",
         KeySpecialties: "Banjo & Beatboxing",
         YearsProfessional: "42",
         YearsTutoring: "40",
-        Rating: "0.2"
+        Rating: "0.2",
     },
     {
         name: "Ayman Madeen",
@@ -95,7 +105,7 @@ const data = [
         KeySpecialties: "Drums",
         YearsProfessional: "25",
         YearsTutoring: "1",
-        Rating: "4.6"
+        Rating: "4.6",
     },
 
     {
@@ -104,7 +114,7 @@ const data = [
         KeySpecialties: "Biology",
         YearsProfessional: "5",
         YearsTutoring: "2",
-        Rating: "4.1"
+        Rating: "4.1",
     },
     {
         name: "Greg Aris",
@@ -112,7 +122,7 @@ const data = [
         KeySpecialties: "Technical writing",
         YearsProfessional: "10",
         YearsTutoring: "4",
-        Rating: "4.5"
+        Rating: "4.5",
     },
     {
         name: "Nasim Maner",
@@ -120,7 +130,7 @@ const data = [
         KeySpecialties: "History",
         YearsProfessional: "30",
         YearsTutoring: "4",
-        Rating: "3.9"
+        Rating: "3.9",
     },
     {
         name: "Jessica Campbell",
@@ -128,24 +138,52 @@ const data = [
         KeySpecialties: "Social Sciences",
         YearsProfessional: "22",
         YearsTutoring: "12",
-        Rating: "3.7"
+        Rating: "3.7",
     },
-]
+];
 
-subject.addEventListener('change', function() {
-    mentorListUpdater(this.value);
-  }, false);
-function removeOptions(selectElement) {
-    var i, L = selectElement.options.length - 1;
-    for(i = L; i >= 0; i--) {
-       selectElement.remove(i);
-    }
- }
- function mentorListUpdater(selectedSubject){
-    removeOptions(mentor)
-    mentor.options.add(new Option('Select an option', 'Disabled'));
-    data.forEach(Mentor => {
-        if(Mentor.Subject == selectedSubject)
-        mentor.options.add(new Option(Mentor.name, Mentor.name));
+let selectedSubject = tableEng;
+let selectedMentor=  tableM1;
+selectedSubject.style.backgroundColor = "#CBFCFF";
+selectedMentor.style.backgroundColor = "#CBFCFF";
+const mentorUpdater = (subject) => {
+    selectedSubject.style.backgroundColor = "";
+    subject.style.backgroundColor = "#CBFCFF";
+    selectedSubject = subject;
+    selectedMentor.style.backgroundColor = "";
+    tableDesc.innerHTML = ``
+    let counter = 0;
+    data.forEach(person => {
+        if(person.Subject === subject.textContent){
+            tableMs[counter].innerHTML = `${person.name}`;
+            counter++;
+        }
     })
- }
+}
+const descriptionUpdater = (mentor) => {
+    selectedMentor.style.backgroundColor = "";
+    mentor.style.backgroundColor = "#CBFCFF";
+    selectedMentor = mentor;
+    data.forEach(person => {
+        if(person.name === mentor.textContent){
+            tableDesc.innerHTML = `
+            <ul>
+                <li class="mb-3">Specialty: ${person.KeySpecialties}</li>
+                <li class="mb-3">Years of professional experience: ${person.YearsProfessional}</li>
+                <li class="mb-3">Years of tutoring: ${person.YearsTutoring}</li>
+                <li class="mb-3">Rating : ${person.Rating} ⭐</li>
+             </ul>
+            `;
+        }
+    })
+}
+tableSubjects.forEach(subject => {
+    subject.addEventListener("click",()=> mentorUpdater(subject));
+});
+tableMs.forEach(mentor => {
+    mentor.addEventListener("click",()=> descriptionUpdater(mentor));
+})
+
+var scroll = new SmoothScroll('.nav-link a[href*="#"]', {
+	speed: 800
+});

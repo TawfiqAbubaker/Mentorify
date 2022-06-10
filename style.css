@@ -1,8 +1,14 @@
+
 .logo{
     height: 25px;
     width: 150px;
 }
-
+*, html {
+    scroll-behavior: smooth;
+}
+.bl {
+    display: inline-block;
+}
 .navbar-nav{
     margin-left: auto;
     margin-right: auto;
@@ -14,6 +20,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 }
+.defButton :hover {
+    cursor: copy;
+}
 .plansButton{
     background-color: #17E9E0;
 }
@@ -22,8 +31,29 @@
 }
 .cardItem {
     border-radius: 60px;
-    height: 260px;
+    height: 300px;
     width: 10px;
+}
+.cardPremium{
+    border-radius: 60px;
+    height: 300px;
+    background-color:#FCCD04; 
+    height: 350px; 
+    max-width: 50px ;
+}
+.cardPremium2{
+    height: 350px;
+    width: 300px;
+    border-radius: 60px;
+    background-color:#FCCD04; 
+    padding-top: 1px;
+}
+.cardItem2{
+    height: 300px;
+    width: 300px;
+    border-radius: 60px;
+
+    padding-top: 1px;
 }
 .bookingForm{
     max-width: 350px;
@@ -46,8 +76,31 @@
     cursor: inherit;
     line-height: inherit;
 }
-label {
+#footer{
+    height: 200px;
+    background-color: rgba(88, 199, 194, 1);
+}
+@media (max-width:768px) {
+    #footer{
+        height: 300px !important;
+    }
+}
+@media (max-width:600px) {
+    #footer{
+        font-size: smaller;
+    }
+}
+.form1Label {
     margin-left: 8px;
+}
+.tableItem{
+    width: 100%;
+    /* border: black dotted 1px; */
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: 0;
+    padding: 10px;
 }
 select {
     background-color: rgba(244, 250, 255, 1);
@@ -63,6 +116,19 @@ select {
     cursor: inherit;
     line-height: inherit;
 }
+input {
+    background-color: rgba(244, 250, 255, 1);
+    color: rgb(44, 44, 44);
+    font-weight: 150;
+    border: none;
+    min-height: 30px;
+    padding: 5px 5px 5px 10px;
+    max-width: 250px;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+}
+
 @media screen and (max-width: 800px) {
     .defButton{
         width: 5em;
@@ -79,5 +145,24 @@ select {
 @media screen and (max-width: 575px){
     #formImage{
         display: none;
+    }
+}
+@media screen and (max-width: 992px) {
+    .cardItem{
+        max-width: 200px !important;
+    }
+    .cardPremium{
+        max-width: 200px !important;
+        padding: 0 !important;
+        font-size: smaller;
+    }
+}
+@media (max-width: 780px) {
+    
+    .tripleC{
+        display: none !important;
+    }
+    .carouselParent {
+        display: flex !important;
     }
 }
