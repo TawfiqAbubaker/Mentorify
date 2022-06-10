@@ -166,3 +166,26 @@ input {
         display: flex !important;
     }
 }
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0px;
+    left: 0;
+    background-color: #4d4d4d;
+    transform-origin: bottom right;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #333333;
+  }
