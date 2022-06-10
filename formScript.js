@@ -13,7 +13,7 @@ const data = [
     {
         name: "Rod Knee",
         Subject: "Engineering",
-        KeySpecialties: "Computer Science",
+        KeySpecialties: "Computer Engineering",
         YearsProfessional: "5",
         YearsTutoring: "1",
         Rating: "4.9",
@@ -108,7 +108,7 @@ const data = [
     },
 
     {
-        name: "Rod Knee",
+        name: "Rock lee",
         Subject: "Other",
         KeySpecialties: "Biology",
         YearsProfessional: "5",
