@@ -48,6 +48,13 @@
     background-color:#FCCD04; 
     padding-top: 1px;
 }
+section {
+    scroll-snap-align: start;
+}
+.page {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+}
 .cardItem2{
     height: 300px;
     width: 300px;
